@@ -10,7 +10,7 @@
 - **User:** 改變主意，要求刪除 `0_devLog.md`。
 - **Gemini:** 刪除 `0_devLog.md` 並在 `Todo.md` 中記錄此操作。
 
-## 6.0 onwards：重新定義開發日誌
+## 6.0-11.0 onwards：重新定義開發日誌
 - **User:** 要求重新建立 `0_devLog.md`，並將整個對話歷史記錄在其中，使用指定的標題格式。
 - **Gemini:** 正在執行此操作。
 
@@ -19,7 +19,6 @@
 - **User:** (在本機端成功執行指令)
 
 ## 14.0-End: Streamlit 應用程式開發與迭代 (詳細對話紀錄)
-
 - **User:** 根據 prompt.txt 中的prompt進行網站製作。
 - **Gemini:** 讀取 `prompt.txt`，分析需求後提議使用 Streamlit 建立一個互動式線性迴歸網站，並規劃了 `app.py` 和 `requirements.txt` 檔案結構。
 - **User:** 同意計畫。
@@ -48,4 +47,4 @@
 - **User:** 要求更新 `requirements.txt`。
 - **Gemini:** 執行 `pip freeze`，篩選出專案直接相依的套件，並將其鎖定版本後更新 `requirements.txt`，然後將變更推送到 GitHub。
 - **User:** 要求將開發日誌的摘要部分改為對話格式。
-- **Gemini:** (正在執行此操作)。
+- **Gemini:** 整理並更新了開發日誌為詳細的對話格式，並將其推送到 GitHub。
