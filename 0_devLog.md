@@ -14,28 +14,38 @@
 - **User:** 要求重新建立 `0_devLog.md`，並將整個對話歷史記錄在其中，使用指定的標題格式。
 - **Gemini:** 正在執行此操作。
 
-## 12.0-13.0：成功運行 Streamlit 應用程式
+## 12.0-13.0：運行 Streamlit 應用程式
+- **Gemini:** 提供 `streamlit run HW1/app.py` 指令來啟動應用程式。
+- **User:** (在本機端成功執行指令)
 
-- **專案初始化**:
-  - 根據 `prompt.txt` 的要求，使用 Streamlit 建立一個互動式線性迴歸網站。
-  - 建立 `app.py` 和 `requirements.txt`。
+## 14.0-End: Streamlit 應用程式開發與迭代 (詳細對話紀錄)
 
-- **核心功能開發**:
-  - 從頭實作一個 `LinearRegression` 類別，包含 `fit` 和 `predict` 方法。
-  - 實現梯度下降演算法來訓練模型。
-  - 建立資料生成函數 `generate_data`。
-
-- **使用者介面 (UI) 開發**:
-  - 建立側邊欄，提供滑桿讓使用者調整資料點數量、係數 'a' 和雜訊變異數。
-  - 實作 `matplotlib` 圖表以視覺化資料點和迴歸線。
-  - 將圖表中的標籤和標題改為英文。
-  - 調整滑桿的數值範圍以符合使用者需求。
-
-- **進階功能與排版**:
-  - 新增「Model Coefficients」區塊，顯示模型的斜率與截距。
-  - 新增「Top 5 Outliers」區塊：
-    - 計算並找出5個最大的離群值。
-    - 在圖表上用紫色點和標籤 (`Outlier {index}`) 特別標示出離群值。
-    - 建立一個表格，顯示離群值的原始索引、X/y 值和預測值。
-  - 移除「對新資料進行預測」區塊。
-  - 調整 UI 區塊順序，使其更符合參考網站的排版。
+- **User:** 根據 prompt.txt 中的prompt進行網站製作。
+- **Gemini:** 讀取 `prompt.txt`，分析需求後提議使用 Streamlit 建立一個互動式線性迴歸網站，並規劃了 `app.py` 和 `requirements.txt` 檔案結構。
+- **User:** 同意計畫。
+- **Gemini:** 建立 `app.py` 和 `requirements.txt` 檔案。在安裝 `requirements.txt` 時，`sklearn` 套件安裝失敗。
+- **Gemini:** 發現 `sklearn` 是已棄用的套件名稱，將其更正為 `scikit-learn` 後成功安裝。
+- **User:** 要求將圖表中的文字改成英文。
+- **Gemini:** 修改 `app.py`，將圖表的標題和圖例改為英文。
+- **User:** 要求調整三個滑桿的數值範圍。
+- **Gemini:** 修改 `app.py` 中的 `st.sidebar.slider` 參數。
+- **User:** 要求在圖表中標出5個最大的離群值，並新增 Model Coefficients 和 Top 5 Outliers 區塊。
+- **Gemini:** 修改 `app.py`，加入離群值計算、在圖表中繪製離群點，並新增對應的 UI 區塊。
+- **User:** 要求移除「對新資料進行預測」區塊。
+- **Gemini:** 從 `app.py` 中移除相關程式碼。
+- **User:** 要求離群值標示為 #1, #2...
+- **Gemini:** 修改 `app.py`，在圖表和表格中加入離群值排名。
+- **User:** 要求離群值標示為其在資料集中的原始索引，如 "Outlier 30"。
+- **Gemini:** 再次修改 `app.py`，將排名標示改為原始索引標示。
+- **User:** 要求撰寫 README.md 報告。
+- **Gemini:** 根據開發過程和結果，生成 `README.md` 檔案。
+- **User:** 要求將 `HW1` 資料夾的內容上傳到 GitHub。
+- **Gemini:** 執行 `git init`, `git remote add`, `git add`, `git commit`, `git push` 等指令，成功將專案上傳。
+- **User:** 要求移除 `HW1` 資料夾，將所有檔案移至根目錄。
+- **Gemini:** 移動檔案，並透過 `git commit` 和 `git push` 更新 GitHub 儲存庫的檔案結構。
+- **User:** 詢問 Python 版本。
+- **Gemini:** 執行 `python --version` 並回報版本為 `3.12.2`。
+- **User:** 要求更新 `requirements.txt`。
+- **Gemini:** 執行 `pip freeze`，篩選出專案直接相依的套件，並將其鎖定版本後更新 `requirements.txt`，然後將變更推送到 GitHub。
+- **User:** 要求將開發日誌的摘要部分改為對話格式。
+- **Gemini:** (正在執行此操作)。
