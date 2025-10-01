@@ -18,7 +18,7 @@
 - **Gemini:** 提供 `streamlit run HW1/app.py` 指令來啟動應用程式。
 - **User:** (在本機端成功執行指令)
 
-## 14.0-End: Streamlit 應用程式開發與迭代 (詳細對話紀錄)
+## 14.0-End: Streamlit 應用程式開發與迭代
 - **User:** 根據 prompt.txt 中的prompt進行網站製作。
 - **Gemini:** 讀取 `prompt.txt`，分析需求後提議使用 Streamlit 建立一個互動式線性迴歸網站，並規劃了 `app.py` 和 `requirements.txt` 檔案結構。
 - **User:** 同意計畫。
